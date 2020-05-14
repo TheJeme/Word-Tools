@@ -3,15 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WordTools"
              x:Class="WordTools.MainPage"
-             Title="Word Tools">
+             Title="WordTools">
 
     <StackLayout>
-        <Label Text="Paste text here" 
-           HorizontalOptions="Start"
-           Margin="12"
-           FontSize="28"/>
-
-        <Editor x:Name="wordsText" VerticalOptions="FillAndExpand" Margin="12"/>
+        <Frame BackgroundColor="#eaeaea" VerticalOptions="FillAndExpand" Margin="12" CornerRadius="16">
+            <Editor x:Name="wordsText" Placeholder="Type here" Margin="4" FontSize="18" TextChanged="WordsText_TextChanged"/>
+        </Frame>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout Margin="3">
+                <Label x:Name="WordLabel" Text="Words: 0" Margin="20,0"/>
+                <Label x:Name="CharLabel" Text="Characters: 0" Margin="20,0"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="EndAndExpand">
+                <Button x:Name="InfoButton" Text="Info" Margin="0,0,20,0" Clicked="InfoButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
