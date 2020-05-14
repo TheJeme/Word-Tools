@@ -2,13 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WordTools"
-             x:Class="WordTools.MainPage">
+             x:Class="WordTools.MainPage"
+             Title="Word Tools">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label Text="Paste text here" 
+           HorizontalOptions="Start"
+           Margin="12"
+           FontSize="28"/>
+
+        <Editor x:Name="wordsText" VerticalOptions="FillAndExpand" Margin="12"/>
     </StackLayout>
 
 </ContentPage>
