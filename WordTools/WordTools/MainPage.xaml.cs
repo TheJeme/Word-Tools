@@ -17,7 +17,7 @@ namespace WordTools
 
         async void InfoButton_Clicked(object sender, EventArgs e)
         {
-            if (wordsText.Text.Length > 0)
+            if (wordsText.Text != null && wordsText.Text != "")
             {
                 IDictionary<string, int> wordList = new Dictionary<string, int>();
                 string[] words = wordsText.Text.Split();
